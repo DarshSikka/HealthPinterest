@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+</head>
+<body>
+blabla.html
+<script>
+	fetch("/auth/login", {
+	method: "POST", 
+	headers:{
+	"Content-Type":"application/json", 
+	},
+	body:JSON.stringify({
+		username: "hELLO KITTY",
+		password: "bye kitt",
+		name: "kitty hel",
+		email: "kitty@kitty.org"
+	})}).then(resp=>resp.json()).then(res=>console.log(res));
+</script>
+</body>
+</html>
