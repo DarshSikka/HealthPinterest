@@ -23,6 +23,11 @@ const schema = new mongoose.Schema({
     required: false,
     default: "",
   },
+  following: {
+  	type: Array,
+  	default: []
+  },
+
 });
 const User = mongoose.model("User", schema, "users");
 module.exports = User;

@@ -30,4 +30,14 @@ router.post("/login", (req, res) => {
     }
   });
 });
+router.post("/authenticate", (req, res) => {
+  const { tok } = req.body;
+  User.findOne({ _id: tok }, (err, result) => {
+    if (!result) {
+      res.send({ success: false, msg: "farji user" });
+    } else {
+      res.send({ success: true, msg: result });
+    }
+  });
+});
 module.exports = router;

@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const posts=require("./routes/posts");
 app.use(express.json());
 const User = require("./models/User");
 const Auth = require("./routes/auth");
 app.use(express.static("static"));
 app.use("/auth", Auth);
+app.use("/posts", posts);
 require("dotenv").config();
 mongoose.connect(
   process.env.DB_URI,

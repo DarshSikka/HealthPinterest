@@ -7,16 +7,19 @@
 <body>
 blabla.html
 <script>
-	fetch("/auth/login", {
+	fetch("/posts/new", {
 	method: "POST", 
 	headers:{
 	"Content-Type":"application/json", 
 	},
 	body:JSON.stringify({
-		username: "hELLO KITTY",
-		password: "bye kitt",
-		name: "kitty hel",
-		email: "kitty@kitty.org"
+		title: "Ram charit manas",
+		content: "Pul made over lanka",
+		author: {
+			username: 'Hello Kitty',
+			email: "hellokitty@kitty.org",
+			name: "Kitty.hell"
+		}
 	})}).then(resp=>resp.json()).then(res=>console.log(res));
 </script>
 </body>
