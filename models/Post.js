@@ -13,6 +13,10 @@ const schema=new mongoose.Schema({
    	required: false,
    	default: ""
    },
+   likes: {
+      type: Number,
+      default: 0
+   },
    timestamp:{
       type: Date,
       default: new Date()

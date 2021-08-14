@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const app = express();
 const posts=require("./routes/posts");
 app.use(express.json());
+const cors=require("cors");
+app.use(cors());
 const User = require("./models/User");
 const Auth = require("./routes/auth");
 app.use(express.static("static"));
