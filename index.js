@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const posts=require("./routes/posts");
+const posts = require("./routes/posts");
 app.use(express.json());
-const cors=require("cors");
+const cors = require("cors");
 app.use(cors());
 const User = require("./models/User");
 const Auth = require("./routes/auth");
-app.use(express.static("static"));
+app.use(express.static("build"));
 app.use("/auth", Auth);
 app.use("/posts", posts);
 require("dotenv").config();
