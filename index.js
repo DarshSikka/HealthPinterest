@@ -10,7 +10,6 @@ const Auth = require("./routes/auth");
 app.use(express.static("build"));
 app.use("/auth", Auth);
 app.use("/posts", posts);
-require("dotenv").config();
 mongoose.connect(
   process.env.DB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
